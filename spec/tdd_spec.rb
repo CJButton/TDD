@@ -12,12 +12,11 @@ describe Array do
     end
 
     it "should return only unique elements" do
-      expect(an_array.my_uniq).to eq(:an_array.uniq)
+      expect(an_array.my_uniq).to eq(an_array.uniq)
     end
 
     it "should not call #uniq" do
-      expect(an_array.my_uniq).to not_receive(:uniq)
+      expect(an_array.my_uniq).to_not receive(:uniq)
     end
-
   end
 end
